@@ -1,0 +1,73 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<head>
+    <link href="{{ url_for('static', filename='css/home.css') }}" rel="stylesheet">
+</head>
+<!-- hero section -->
+<section class="hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="copy">
+                    <div class="text-hero-bold">
+                        Bhutanese License Number Plate
+                    </div>
+                    <div class="text-hero-regular">
+                        We provide you with a fast and effective Bhutanese License Plate Number Recognition system
+                         to identify and accurately recognize license number plate under varying conditions
+                    </div>
+                    <div class="cta">
+                        <a href="{{url_for('service')}}" class="btn btn-primary">Get Started</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img class="img-fluid" src="{{ url_for('static', filename='images/car.svg') }}"/>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ======= info Section ======= -->
+<section id="info-brand" class="info-brand">
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-xl-6 col-lg-3 col-md-6 image-container">
+            <img src="{{ url_for('static', filename='images/car01.jpg') }}" class="img-fluid" alt="">
+        </div>
+
+        <div class="col-xl-6 col-lg-3 col-md-6 description" data-wow-delay="0.1s">
+            <div class="text-hero-medium text-center mt-5">
+                Effective License Plate Recognition
+            </div>
+            <div class="text-hero-regular text-center mt-4">
+                Based on Convolutional Neural Network architecture, we provide a fast and
+                 effective license number plate recognition for Bhutanese vehicles. Using
+                  this system, you can accurately identify, verify and capture vehicle plate number.
+                   The user must first upload a car image. The system then displays the extracted
+                    license number plate.
+            </div>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-xl-6 col-lg-3 col-md-6 description" data-wow-delay="0.1s">
+            <div class="text-hero-medium text-center mt-5">
+                Our Vision & Our Mission
+            </div>
+            <div class="text-hero-regular text-center mt-4">
+                Our Vision is to help users identify, verify and validate any Bhutanese
+                vehicle number plates under varying conditions through image recognition. 
+                Our Mission is to create an effective system to recognize Bhutanese license
+                 number plate using deep learning. This system is also applicable in sectors
+                  like traffic management, command force and automatic parking mangement.
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-3 col-md-6">
+            <img src="{{ url_for('static', filename='images/car02.jpg') }}" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- End Team Section -->
+
+{% endblock %}

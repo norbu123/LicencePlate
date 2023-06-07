@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300;1,500&display=swap');
+:root {
+
+    --primary: #AA77FF;
+    --primary-light: #B2A4FF;
+    --dark-brown: #341413;
+    --gray-1: #798092;
+    --gray-2: #E6F6ED;
+    --white: #FFFFFF; 
+
+    --header-1: 64px;
+    --header-2: 48px;
+    --header-3: 42px;
+    --header-4: 32px;
+
+    --text-medium: 18px;
+    --text-regular: 16px;
+    --text-light: 13px;
+
+    --font-weight-bold: 700;
+    --font-weight-semi-bold: 600;
+    --font-weight-medium: 500;
+    --font-weight-regular: 400;
+    --font-weight-light: 300;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.btn {
+    padding: 15px 25px;
+    border-radius: 6px;
+    font-size: var(--text-medium);
+    font-weight: var(--font-weight-medium);
+    border-radius: 30px;
+}
+.btn-primary{
+    background-color: var(--primary);
+    border: none;
+}
+.btn-primary:focus {
+    background-color: var(--primary-light);
+    border:none;
+    
+}
+.btn-primary:hover {
+    background-color: var(--primary);
+}
+.btn-secondary{
+    background-color: var(--gray-2);
+    color:var(--gray-1);
+}
+.btn-secondary:focus{
+    background-color: var(--white) !important;
+    box-shadow: 0px 4px 19px rgba(0,0,0,0.05) !important;
+    color: var(--gray-1);
+    border: none;
+
+}
+.navbar-brand img{
+     padding-right: 16px;
+}
+.navbar-brand span {
+    font-size: var(--text-medium);
+    font-weight: var(--font-weight-medium);
+    color: var(--dark-brown);
+}
+.navbar{
+    padding: 48px 0;
+}
+a.nav-link {
+    margin-right: 39px;
+    font-size: var(--text-regular);
+    font-weight: var(--font-weight-regular);
+    color: var(--dark-brown) !important;
+}
+section.hero {
+    margin: 5 rem 0;
+}
+
+.text-label,
+.text-hero-bold,
+.text-hero-regular {
+    margin: 24px 0;
+}
+
+.text-label {
+    color: var(--primary);
+    font-size: var(--text-regular);
+    font-weight: var(--font-weight-regular);
+    line-height: 74px;
+}
+.text-hero-bold{
+    color: var(--dark-brown);
+    font-size: var(--header-1);
+    font-weight: var(--font-weight-bold);
+    line-height: 74px; 
+}
+.text-hero-regular{
+    color: var(--gray-1);
+    font-size: var(--text-regular);
+    font-weight: var(--font-weight-regular);
+    line-height: 31px; 
+}
+.description{
+    box-shadow:0 0 10px rgba(0,0,0,0.08);
+}
+.image-container{
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+}

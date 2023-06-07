@@ -1,0 +1,108 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<head>
+    <link href="{{ url_for('static', filename='css/about.css') }}" rel="stylesheet">
+</head>
+<section class="hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img class="img-fluid" src="{{ url_for('static', filename='images/people.svg') }}"/>
+            </div>
+            <div class="col-md-6">
+                <div class="copy">
+                    <div class="text-hero-bold">
+                        Bhutanese License Plate Recognition
+                    </div>
+                    <div class="text-hero-regular">
+                        Our project aims to help RSTA and public users to identify, verify and validate vehicle license number plates.
+                        It will initially focus on the different vehicle number plates used within the country. Using this system,
+                        users can upload images of license number plate under different lighting conditions to recognize license
+                        number plate.
+                        To identify vehicle license plates in different lighting conditions.
+                        To accurately identify, verify and capture the vehicle license plate.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- about section -->
+<section class="about-section">
+    <div class="container">
+        <div class="row mt-3 box-container">
+          <div class="col-xl-12 col-lg-6 col-md-6 description" data-wow-delay="0.1s">
+              <div class="text-hero-regular text-md-left mt-4">
+                The scope of the project is within the country. Our primary aim is to initially
+                focus on the different vehicle number plates used within the country. In this project,
+                a model will be trained using CNN algorithms to recognize license number plates.
+                The model with the best performance will be integrated with the website and deployed
+                in a free hosting server. Using this system, users can
+                upload images of license number plate under different lighting conditions to recognize license
+                 number plate.Traffic management in our country is presently dependent on human labor as a result
+                of which there can be potential errors while monitoring traffic related activities. It also requires
+                trained personnel to monitor traffic and collect data. In areas where there are a larger number of
+                vehicles, the traffic management has limited capacity to monitor traffic flows and vehicle movements.
+                As a result, it becomes challenging both for the concerned authorities such as the Royal Safety and 
+                Transport Division to monitor the traffic movement and those who own vehicles.
+                To overcome this problem, we proposed this project by developing a system which recognizes
+                 vehicle number plates. Using this system, users will be able to verify and validate license number plates.
+              </div>
+              <div class="row mt-4 pb-3">
+                <div class="col-xl-4 col-lg-4 col-md-4">
+                    <img class="img-fluid" src="{{ url_for('static', filename='images/car03.jpg') }}"/>
+                  </div>
+                <div class="col-xl-8 col-lg-8 col-md-6">
+                    <div class="text-medium">CNN Algorithm</div>
+                    <div class="text-hero-regular">
+                        A CNN is a kind of network architecture for deep learning algorithms and is specifically used for
+                        image recognition and tasks that involve the processing of pixel data. A CNN is a kind of network
+                        architecture for deep learning algorithms and is specifically used for image recognition and tasks
+                        that involve the processing of pixel data. 
+                        A CNN is a kind of network architecture for deep learning algorithms and is specifically used for image
+                        recognition and tasks that involve the processing of pixel data.
+                    </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+</section>
+<!-- Team section -->
+<div class="team-section">
+    <div class="container">
+        <div class="row mt-3 box-container">
+            <div class="text-hero-bold text-center">Our Team</div>
+            <div class="col-xl-4 col-lg-4 col-md-4 text-center">
+                <img class="img-fluid team" src="{{ url_for('static', filename='images/nyim.png') }}"/>
+                <div class="text-medium mt-2">Nima</div>
+                <div class="text-medium">12200067.gcit@rub.edu.bt</div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 text-center">
+                <img class="img-fluid team" src="{{ url_for('static', filename='images/sanga.png') }}"/>
+                <div class="text-medium mt-2">Sanga Tenzin</div>
+                <div class="text-medium">12200076.gcit@rub.edu.bt</div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 text-center">
+                <img class="img-fluid team" src="{{ url_for('static', filename='images/hang.png') }}"/>
+                <div class="text-medium mt-2">Yudhistra Hang Subba</div>
+                <div class="text-medium">12200096.gcit@rub.edu.bt</div>
+            </div>
+            <div class="row mt-3 pb-3">
+                <div class="col-xl-4 col-lg-4 col-md-4 text-center">
+                    <img class="img-fluid team" src="{{ url_for('static', filename='images/tshewang.png') }}"/>
+                    <div class="text-medium mt-2">Tshewang Dechen</div>
+                    <div class="text-medium">12200092.gcit@rub.edu.bt</div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 text-center">
+                    <img class="img-fluid team" src="{{ url_for('static', filename='images/tshering.png') }}"/>
+                    <div class="text-medium mt-2">Tshering Deker</div>
+                    <div class="text-medium">12200091.gcit@rub.edu.bt</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,88 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<head>
+    <link href="{{ url_for('static', filename='css/service.css') }}" rel="stylesheet">
+</head>
+<div class="service-section">
+    <div class="container">
+        <div class="row text-center mx-5 box-container">
+            <div class="col-xl-12 col-lg-12 col-md-6 text-center mt-4">
+                <div class="text-hero-medium text-center">License Plate Recognition</div>
+                <div class="text-regular mt-4 text-center">
+                    Upload an image.We will help you recognize the license plate number.
+                </div>
+                <div class="container mt-4">
+                    <form action="#" method="POST" enctype="multipart/form-data" class="container mr-5">
+                        <input type="file" class="form-control" name="image_name" required/>
+                        <!-- <input type="hidden" name="MAX_IMAGE_SIZE" value="{{MAX_IMAGE_SIZE}}"/> -->
+                    <input type="submit" value="Upload Image" class="btn btn-primary mt-3 mb-3"/>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- <div class="container">
+        <br><br>
+        <form action="#" method="POST" enctype="multipart/form-data">
+            <div class="input-group">
+                <input type="file" class="form-control" name="image_name" required>
+                <input type="submit" value="upload" class="btn btn-outline-secondary">
+            </div>
+        </form>
+    </div> -->
+
+    {% if upload %}
+    <div class="result-section">
+        <div class="container">
+            <div class="row box-container mx-5 mt-5">
+                <div class="text-hero-medium text-center mt-5">
+                    Here's the Result
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 mt-5 mb-4">
+                    <img class="rounded float-left img-fluid" src="/static/upload/{{upload_image}}" alt="">
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 mt-5 mb-4">
+                    <img class="rounded float-right img-fluid" src="/static/predict/{{upload_image}}" alt="">
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4">
+                    <div class="mt-5">
+                        <div class="text-medium mt-5">License Plate Number</div>
+                    <div class="text-hero-medium mt-5">
+                        {{text[1][1]}}
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- <div class="container">
+            <table>
+                <tr>
+                    <td>
+                        <img class="rounded float-left img-fluid" src="/static/upload/{{upload_image}}" alt="">
+                    </td>
+
+                    <td>
+                        <img class="rounded float-right img-fluid" src="/static/predict/{{upload_image}}" alt="">
+                    </td>
+                </tr>
+            </table>
+            <table style="border: solid black; width: 100%">
+                <tr style="border: solid black;">
+                    <th>Cropped License plate image</th>
+                    <th>text</th>
+                </tr>
+                <tr style="border: solid black;">
+                    <td>
+                        <img class="img-fluid" src="/static/roi{{ upload_image }}" alt="">
+                    </td>
+                    <td style="background-color: greenyellow;">
+                        <h1 class="display-8">{{text[1][1]}}</h1>
+                    </td>
+                </tr>
+            </table>
+        </div> -->
+    {% endif %}
+{% endblock %}
